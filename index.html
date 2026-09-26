@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf7fb">
+  <meta name="description" content="Una guía sencilla e interactiva para acompañar tus hábitos de hidratación.">
+  <title>Agüita — tu pausa para hidratarte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Agüita, inicio"><span class="brand-mark" aria-hidden="true">◒</span> agüita<span class="brand-period">.</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#guia">La guía</a><a href="#bebidas">Bebidas</a><a class="nav-cta" href="#contador">Mi contador <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> UN HÁBITO PEQUEÑO, UN BUEN COMIENZO</p>
+        <h1 id="hero-title">Un sorbito<br>y <span class="serif">seguimos.</span></h1>
+        <p class="hero-text">Una guía amable para acompañarte a tomar agua durante el día. Sin reglas rígidas: cada cuerpo tiene su propio ritmo.</p>
+        <a class="button button-dark" href="#contador">Empezar mi día <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span class="note-icon" aria-hidden="true">✳</span><span>Tu recordatorio para volver a lo simple.<br><strong>Un vaso a la vez.</strong></span></div>
+      </div>
+      <div class="hero-art" aria-label="Ilustración de un vaso de agua sobre fondo celeste" role="img">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="sun-dot"></div><div class="sparkle sparkle-one">✳</div><div class="sparkle sparkle-two">✦</div>
+        <div class="glass-shadow"></div>
+        <div class="glass"><div class="water-line"></div><div class="water-fill"></div><div class="glass-shine"></div></div>
+        <div class="art-caption"><span>HIDRATACIÓN, A TU MANERA</span><span class="caption-line"></span></div>
+        <div class="floating-bubble bubble-a"></div><div class="floating-bubble bubble-b"></div>
+      </div>
+    </section>
+
+    <section class="fact-strip" aria-label="Dato sobre hidratación">
+      <div class="wrap fact-inner"><span class="fact-spark" aria-hidden="true">✳</span><p>¿Sabías que cerca del <strong>20 %</strong> del agua que necesitamos puede venir de los alimentos?</p><a href="#guia">Conoce más <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="section wrap guide-section" id="guia">
+      <div class="section-heading"><div><p class="eyebrow">01 — LO ESENCIAL</p><h2>¿Cuánta agua<br><span class="serif">necesito?</span></h2></div><p class="section-intro">La respuesta corta: depende de ti. Tu actividad, el clima y tu salud pueden cambiar cuánto líquido necesitas.</p></div>
+      <div class="guide-grid">
+        <article class="volume-card"><div class="volume-top"><span class="tag tag-blue">UNA REFERENCIA GENERAL</span><span class="card-spark" aria-hidden="true">✳</span></div><div class="volume-number">8<span> vasos</span></div><p>Es una meta fácil de recordar para empezar. No es una regla universal ni tiene que ser solo agua.</p><div class="glass-row" aria-hidden="true"><span>◒</span><span>◒</span><span>◒</span><span>◒</span><span>◒</span><span>◒</span><span>◒</span><span>◒</span></div></article>
+        <article class="range-card"><div class="range-illustration" aria-hidden="true"><span class="range-sun">☼</span><span class="range-wave"></span><span class="range-wave range-wave-two"></span><span class="range-leaf">✳</span></div><div class="range-content"><span class="tag tag-green">LÍQUIDOS TOTALES</span><h3>2,7–3,7 <small>litros</small></h3><p>Mayo Clinic cita este rango aproximado para el adulto saludable promedio. Incluye líquidos de todas las fuentes, no solo agua servida.</p></div></article>
+      </div>
+      <aside class="gentle-note"><span aria-hidden="true">ⓘ</span><p><strong>Una orientación, no una prescripción.</strong> Si tienes una condición de salud, tomas medicación o recibiste indicaciones sobre líquidos, consulta con tu profesional de salud.</p></aside>
+    </section>
+
+    <section class="section drinks-section" id="bebidas">
+      <div class="wrap"><div class="section-heading drinks-heading"><div><p class="eyebrow">02 — LO QUE TOMAS</p><h2>No todo viene<br><span class="serif">en un vaso de agua.</span></h2></div><p class="section-intro">También cuentan otras bebidas y algunos alimentos. Elige con calma y recuerda que no todas aportan lo mismo.</p></div>
+        <div class="drink-grid">
+          <article class="drink-card drink-good"><div class="drink-icon icon-water" aria-hidden="true"><span>〰</span></div><div class="drink-label"><span class="status-dot status-green"></span> LA OPCIÓN MÁS SIMPLE</div><h3>Agua</h3><p>Hidrata sin azúcar ni calorías. Un buen punto de partida a lo largo del día.</p><span class="drink-mark" aria-hidden="true">↗</span></article>
+          <article class="drink-card drink-ok"><div class="drink-icon icon-tea" aria-hidden="true"><span>☕</span></div><div class="drink-label"><span class="status-dot status-green"></span> TAMBIÉN APORTAN LÍQUIDO</div><h3>Té, café y leche</h3><p>Pueden contribuir a tu ingesta de líquidos. Elige opciones que se adapten a ti.</p><span class="drink-mark" aria-hidden="true">↗</span></article>
+          <article class="drink-card drink-caution"><div class="drink-icon icon-soda" aria-hidden="true"><span>✳</span></div><div class="drink-label"><span class="status-dot status-amber"></span> MEJOR CON MODERACIÓN</div><h3>Bebidas azucaradas</h3><p>Refrescos y jugos pueden aportar mucho azúcar, sal o calorías.</p><span class="drink-mark" aria-hidden="true">!</span></article>
+          <article class="drink-card drink-avoid"><div class="drink-icon icon-alcohol" aria-hidden="true"><span>×</span></div><div class="drink-label"><span class="status-dot status-red"></span> NO PARA HIDRATARSE</div><h3>Alcohol</h3><p>No lo cuentes como una opción para hidratarte: prioriza agua u otras bebidas sin alcohol.</p><span class="drink-mark" aria-hidden="true">!</span></article>
+        </div>
+        <p class="food-footnote"><span aria-hidden="true">✿</span> Frutas y verduras con alto contenido de agua, como sandía, fresas y melón, también suman.</p>
+      </div>
+    </section>
+
+    <section class="section tracker-section wrap" id="contador">
+      <div class="tracker-intro"><p class="eyebrow">03 — TU PAUSA DE HOY</p><h2>Vamos <span class="serif">vaso</span><br>a vaso.</h2><p>Registra lo que tomas y sigue tu ritmo. Tu progreso se guarda en este dispositivo.</p><div class="daily-tip"><span aria-hidden="true">✳</span><span><strong>Un hábito flexible</strong><br>La meta es una referencia; escucha tu cuerpo.</span></div></div>
+      <div class="tracker-card">
+        <div class="tracker-top"><div><span class="today-label">TU DÍA DE HOY</span><p class="today-date" id="today-date"></p></div><button class="reset-button" id="reset-button" type="button" aria-label="Reiniciar contador de hoy">Reiniciar ↺</button></div>
+        <div class="progress-area"><div class="progress-copy"><span class="progress-count"><strong id="current-count">0</strong><span> / <span id="goal-count">8</span> vasos</span></span><span class="progress-caption" id="progress-caption">Cada vaso cuenta</span></div><div class="progress-track" role="progressbar" aria-label="Progreso de vasos de hoy" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div></div>
+        <div class="cup-grid" id="cup-grid" aria-label="Vasos registrados"></div>
+        <div class="tracker-controls"><button class="button button-add" id="add-glass" type="button"><span aria-hidden="true">＋</span> Tomé un vaso</button><label class="goal-control" for="goal-select">Meta <select id="goal-select" aria-label="Elegir meta diaria"><option value="6">6 vasos</option><option value="8" selected>8 vasos</option><option value="10">10 vasos</option><option value="12">12 vasos</option></select></label></div>
+        <div class="reminders"><div class="reminder-header"><div><span class="reminder-title">PAUSAS PARA RECORDAR</span><p>Un empujoncito mientras tengas la página abierta.</p></div><label class="switch-label"><span class="sr-only">Activar avisos</span><input type="checkbox" id="reminder-toggle"><span class="switch"></span></label></div><div class="reminder-times" id="reminder-times"></div><p class="reminder-status" id="reminder-status" aria-live="polite">Avisos apagados</p></div>
+      </div>
+    </section>
+
+    <section class="source-section"><div class="wrap source-inner"><span class="source-icon" aria-hidden="true">↗</span><div><p class="eyebrow">PARA SEGUIR LEYENDO</p><h2>Información con respaldo.</h2><p>Resumen basado en la guía de Mayo Clinic para adultos saludables.</p></div><a href="https://www.mayoclinic.org/es/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/water/art-20044256" target="_blank" rel="noopener noreferrer">Leer en Mayo Clinic <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-top"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">◒</span> agüita<span class="brand-period">.</span></a><p>Un recordatorio amable para cuidar de ti.</p><a class="coffee-link" href="https://ko-fi.com/martinmartinezgarcia" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">☕</span> Si te gustó la app, podés invitarme un café <span aria-hidden="true">↗</span></a></div><div class="wrap footer-bottom"><span>Hecho con calma y un vaso de agua.</span><span>Contenido informativo; no sustituye consejo médico.</span><a href="#inicio">Volver arriba ↑</a></div></footer>
+</body>
+</html>
