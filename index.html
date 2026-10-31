@@ -3,123 +3,500 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eaf7fb">
+  <meta name="theme-color" content="#f6f3ea">
   <meta name="description" content="Una guía sencilla e interactiva para acompañar tus hábitos de hidratación.">
   <title>Agüita — tu pausa para hidratarte</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
   <script src="app.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+  <div class="rails" aria-hidden="true"></div>
+
   <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Agüita, inicio"><span class="brand-mark" aria-hidden="true">◒</span> agüita<span class="brand-period">.</span></a>
-    <div class="drink-selector" role="group" aria-label="Elegir bebida" hidden>
-      <button type="button" data-drink="agua" aria-pressed="true" aria-controls="view-agua">Agua</button>
-      <button type="button" data-drink="mate" aria-pressed="false" aria-controls="view-mate">Mate</button>
-      <button type="button" data-drink="te" aria-pressed="false" aria-controls="view-te">Té</button>
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Agüita, inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2.6c3.7 4.5 5.8 7.5 5.8 10.1a5.8 5.8 0 0 1-11.6 0c0-2.6 2.1-5.6 5.8-10.1Z"/><path d="M8.1 14.2c1.3 1 2.6 1 3.9 0s2.6-1 3.9 0"/></svg>
+        </span>
+        <span>agüita<span class="brand-period">.</span></span>
+      </a>
+
+      <div class="drink-selector" role="group" aria-label="Elegir bebida" hidden>
+        <button type="button" data-drink="agua" aria-pressed="true" aria-controls="view-agua">Agua</button>
+        <button type="button" data-drink="mate" aria-pressed="false" aria-controls="view-mate">Mate</button>
+        <button type="button" data-drink="te" aria-pressed="false" aria-controls="view-te">Té</button>
+      </div>
+
+      <nav id="water-nav" aria-label="Navegación principal">
+        <a href="#guia">La guía</a>
+        <a href="#bebidas">Bebidas</a>
+        <a class="nav-cta" href="#contador">Mi contador <span aria-hidden="true">↗</span></a>
+      </nav>
     </div>
-    <nav id="water-nav" aria-label="Navegación principal">
-      <a href="#guia">La guía</a><a href="#bebidas">Bebidas</a><a class="nav-cta" href="#contador">Mi contador <span aria-hidden="true">↗</span></a>
-    </nav>
   </header>
 
-  <main id="inicio">
+  <main id="inicio" tabindex="-1">
     <div id="view-agua">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-dot"></span> UN HÁBITO PEQUEÑO, UN BUEN COMIENZO</p>
-        <h1 id="hero-title">Un sorbito<br>y <span class="serif">seguimos.</span></h1>
-        <p class="hero-text">Una guía amable para acompañarte a tomar agua durante el día. Sin reglas rígidas: cada cuerpo tiene su propio ritmo.</p>
-        <a class="button button-dark" href="#contador">Empezar mi día <span aria-hidden="true">↓</span></a>
-        <div class="hero-note"><span class="note-icon" aria-hidden="true">✳</span><span>Tu recordatorio para volver a lo simple.<br><strong>Un vaso a la vez.</strong></span></div>
-      </div>
-      <div class="hero-art" aria-label="Ilustración de un vaso de agua sobre fondo celeste" role="img">
-        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-        <div class="sun-dot"></div><div class="sparkle sparkle-one">✳</div><div class="sparkle sparkle-two">✦</div>
-        <div class="glass-shadow"></div>
-        <div class="glass"><div class="water-line"></div><div class="water-fill"></div><div class="glass-shine"></div></div>
-        <div class="art-caption"><span>HIDRATACIÓN, A TU MANERA</span><span class="caption-line"></span></div>
-        <div class="floating-bubble bubble-a"></div><div class="floating-bubble bubble-b"></div>
-      </div>
-    </section>
-
-    <section class="fact-strip" aria-label="Dato sobre hidratación">
-      <div class="wrap fact-inner"><span class="fact-spark" aria-hidden="true">✳</span><p>¿Sabías que cerca del <strong>20 %</strong> del agua que necesitamos puede venir de los alimentos?</p><a href="#guia">Conoce más <span aria-hidden="true">↗</span></a></div>
-    </section>
-
-    <section class="section wrap guide-section" id="guia">
-      <div class="section-heading"><div><p class="eyebrow">01 — LO ESENCIAL</p><h2>¿Cuánta agua<br><span class="serif">necesito?</span></h2></div><p class="section-intro">La respuesta corta: depende de ti. Tu actividad, el clima y tu salud pueden cambiar cuánto líquido necesitas.</p></div>
-      <div class="guide-grid">
-        <article class="volume-card"><div class="volume-top"><span class="tag tag-blue">UNA REFERENCIA GENERAL</span><span class="card-spark" aria-hidden="true">✳</span></div><div class="volume-number">8<span> vasos</span></div><p>Es una meta fácil de recordar para empezar. No es una regla universal ni tiene que ser solo agua.</p><div class="glass-row" aria-hidden="true"><span>◒</span><span>◒</span><span>◒</span><span>◒</span><span>◒</span><span>◒</span><span>◒</span><span>◒</span></div></article>
-        <article class="range-card"><div class="range-illustration" aria-hidden="true"><span class="range-sun">☼</span><span class="range-wave"></span><span class="range-wave range-wave-two"></span><span class="range-leaf">✳</span></div><div class="range-content"><span class="tag tag-green">LÍQUIDOS TOTALES</span><h3>2,7–3,7 <small>litros</small></h3><p>Mayo Clinic cita este rango aproximado para el adulto saludable promedio. Incluye líquidos de todas las fuentes, no solo agua servida.</p></div></article>
-      </div>
-      <aside class="gentle-note"><span aria-hidden="true">ⓘ</span><p><strong>Una orientación, no una prescripción.</strong> Si tienes una condición de salud, tomas medicación o recibiste indicaciones sobre líquidos, consulta con tu profesional de salud.</p></aside>
-    </section>
-
-    <section class="section drinks-section" id="bebidas">
-      <div class="wrap"><div class="section-heading drinks-heading"><div><p class="eyebrow">02 — LO QUE TOMAS</p><h2>No todo viene<br><span class="serif">en un vaso de agua.</span></h2></div><p class="section-intro">También cuentan otras bebidas y algunos alimentos. Elige con calma y recuerda que no todas aportan lo mismo.</p></div>
-        <div class="drink-grid">
-          <article class="drink-card drink-good"><div class="drink-icon icon-water" aria-hidden="true"><span>〰</span></div><div class="drink-label"><span class="status-dot status-green"></span> LA OPCIÓN MÁS SIMPLE</div><h3>Agua</h3><p>Hidrata sin azúcar ni calorías. Un buen punto de partida a lo largo del día.</p><span class="drink-mark" aria-hidden="true">↗</span></article>
-          <article class="drink-card drink-ok"><div class="drink-icon icon-tea" aria-hidden="true"><span>☕</span></div><div class="drink-label"><span class="status-dot status-green"></span> TAMBIÉN APORTAN LÍQUIDO</div><h3>Té, café y leche</h3><p>Pueden contribuir a tu ingesta de líquidos. Elige opciones que se adapten a ti.</p><span class="drink-mark" aria-hidden="true">↗</span></article>
-          <article class="drink-card drink-caution"><div class="drink-icon icon-soda" aria-hidden="true"><span>✳</span></div><div class="drink-label"><span class="status-dot status-amber"></span> MEJOR CON MODERACIÓN</div><h3>Bebidas azucaradas</h3><p>Refrescos y jugos pueden aportar mucho azúcar, sal o calorías.</p><span class="drink-mark" aria-hidden="true">!</span></article>
-          <article class="drink-card drink-energy"><div class="drink-icon icon-energy" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" focusable="false"><path d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z"/></svg></div><h3>Bebidas energizantes</h3><p>Contienen cafeína y tienen efecto estimulante. Revisá la etiqueta para conocer su composición.</p><details class="energy-details"><summary>Más información<span class="sr-only"> sobre bebidas energizantes</span></summary><p>Sin azúcar no significa sin cafeína: comprobá ambos datos y cuánto contiene el envase completo.</p><p>No las mezcles con alcohol. La JND aconseja evitar su consumo en niños y adolescentes y señala embarazo y lactancia como situaciones de mayor riesgo.</p><p>La cafeína puede afectar el sueño y provocar nerviosismo o palpitaciones. Considerá también la que consumís con mate, té o café.</p><p>Fuentes: <a href="https://www.gub.uy/junta-nacional-drogas/comunicacion/publicaciones/energizantes" target="_blank" rel="noopener noreferrer">JND: energizantes</a> y <a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a>. Consultadas el 20 de octubre de 2026.</p></details></article>
-          <article class="drink-card drink-avoid"><div class="drink-icon icon-alcohol" aria-hidden="true"><span>×</span></div><div class="drink-label"><span class="status-dot status-red"></span> NO PARA HIDRATARSE</div><h3>Alcohol</h3><p>No lo cuentes como una opción para hidratarte: prioriza agua u otras bebidas sin alcohol.</p><span class="drink-mark" aria-hidden="true">!</span></article>
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-index">00</span> UN HÁBITO PEQUEÑO, UN BUEN COMIENZO</p>
+          <h1 id="hero-title">
+            <span class="title-line"><span class="title-line-inner">Un sorbito</span></span>
+            <span class="title-line"><span class="title-line-inner"><span class="serif">y seguimos</span><span class="title-dot">.</span></span></span>
+          </h1>
+          <p class="hero-text" data-reveal>Una guía amable para acompañarte a tomar agua durante el día. Sin reglas rígidas: cada cuerpo tiene su propio ritmo.</p>
+          <div class="hero-actions" data-reveal>
+            <a class="button button-dark" href="#contador">Empezar mi día <span aria-hidden="true">↓</span></a>
+            <span class="hero-micro">REF. 8 VASOS / DÍA</span>
+          </div>
+          <div class="hero-note" data-reveal>
+            <span class="note-icon" aria-hidden="true">✳</span>
+            <span>Tu recordatorio para volver a lo simple.<br><strong>Un vaso a la vez.</strong></span>
+          </div>
         </div>
-        <p class="food-footnote"><span aria-hidden="true">✿</span> Frutas y verduras con alto contenido de agua, como sandía, fresas y melón, también suman.</p>
-      </div>
-    </section>
 
-    <section class="section tracker-section wrap" id="contador">
-      <div class="tracker-intro"><p class="eyebrow">03 — TU PAUSA DE HOY</p><h2>Vamos <span class="serif">vaso</span><br>a vaso.</h2><p>Registra lo que tomas y sigue tu ritmo. Tu progreso se guarda en este dispositivo.</p><div class="daily-tip"><span aria-hidden="true">✳</span><span><strong>Un hábito flexible</strong><br>La meta es una referencia; escucha tu cuerpo.</span></div></div>
-      <div class="tracker-card">
-        <div class="tracker-top"><div><span class="today-label">TU DÍA DE HOY</span><p class="today-date" id="today-date"></p></div><button class="reset-button" id="reset-button" type="button" aria-label="Reiniciar contador de hoy">Reiniciar ↺</button></div>
-        <div class="progress-area"><div class="progress-copy"><span class="progress-count"><strong id="current-count">0</strong><span> / <span id="goal-count">8</span> vasos</span></span><span class="progress-caption" id="progress-caption">Cada vaso cuenta</span></div><div class="progress-track" role="progressbar" aria-label="Progreso de vasos de hoy" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div></div>
-        <div class="cup-grid" id="cup-grid" aria-label="Vasos registrados"></div>
-        <div class="tracker-controls"><button class="button button-add" id="add-glass" type="button"><span aria-hidden="true">＋</span> Tomé un vaso</button><label class="goal-control" for="goal-select">Meta <select id="goal-select" aria-label="Elegir meta diaria"><option value="6">6 vasos</option><option value="8" selected>8 vasos</option><option value="10">10 vasos</option><option value="12">12 vasos</option></select></label></div>
-        <div class="reminders"><div class="reminder-header"><div><span class="reminder-title">PAUSAS PARA RECORDAR</span><p>Un empujoncito mientras tengas la página abierta.</p></div><label class="switch-label"><span class="sr-only">Activar avisos</span><input type="checkbox" id="reminder-toggle"><span class="switch"></span></label></div><div class="reminder-times" id="reminder-times"></div><p class="reminder-status" id="reminder-status" aria-live="polite">Avisos apagados</p></div>
-      </div>
-    </section>
-
-    <section class="source-section"><div class="wrap source-inner"><span class="source-icon" aria-hidden="true">↗</span><div><p class="eyebrow">PARA SEGUIR LEYENDO</p><h2>Información con respaldo.</h2><p>Resumen basado en la guía de Mayo Clinic para adultos saludables.</p></div><a href="https://www.mayoclinic.org/es/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/water/art-20044256" target="_blank" rel="noopener noreferrer">Leer en Mayo Clinic <span aria-hidden="true">↗</span></a></div></section>
-    </div>
-    <div id="view-mate" class="beverage-view" aria-labelledby="mate-title">
-    <section class="hero wrap beverage-cover">
-      <div class="hero-copy"><h1 id="mate-title">Mate<span class="serif">.</span></h1><p class="hero-text">Una pausa que nos acompaña. Conocé lo esencial sobre el mate, su cafeína y la temperatura al tomarlo.</p></div>
-      <div class="beverage-art" role="img" aria-label="Ilustración de un mate con bombilla">
-        <svg viewBox="0 0 400 400" aria-hidden="true" focusable="false"><circle class="art-ring" cx="200" cy="200" r="155"/><circle class="art-sun" cx="290" cy="100" r="35"/><ellipse class="art-shadow" cx="200" cy="318" rx="88" ry="13"/><path class="mate-straw" d="M214 202 253 83 277 68"/><path class="mate-body" d="M139 192 Q115 222 126 269 Q139 320 200 320 Q261 320 274 269 Q285 222 261 192Z"/><ellipse class="mate-rim" cx="200" cy="193" rx="63" ry="22"/><ellipse class="mate-leaves" cx="200" cy="193" rx="52" ry="14"/><path class="mate-straw" d="m214 194 16-48"/><path class="art-shine" d="M147 234q-4 34 19 51"/></svg>
-      </div>
-    </section>
-      <section class="beverage-info wrap" aria-labelledby="mate-guide-title">
-        <h2 id="mate-guide-title">Tu pausa, con información.</h2>
-        <div class="beverage-info-grid">
-          <article class="info-card"><h3>Qué aporta</h3><p>El mate es una infusión de yerba con cafeína y polifenoles, compuestos vegetales que se estudian por su actividad antioxidante.</p><details><summary>Qué sabemos de la evidencia</summary><p>Se investigan sus posibles efectos metabólicos. Un ensayo de ocho semanas encontró cambios en algunos indicadores, pero no demuestra que tomar mate prevenga enfermedades. <a href="https://onlinelibrary.wiley.com/doi/10.1002/mnfr.70065" target="_blank" rel="noopener noreferrer">Ensayo de mate, 2025 (inglés)</a>.</p></details></article>
-          <article class="info-card"><h3>Cafeína y descanso</h3><p>La cafeína puede dificultar el descanso, especialmente cerca de la hora de dormir.</p><details><summary>Cantidades y preparación</summary><p>La preparación y las cebadas cambian la composición de la infusión. Por eso no usamos una equivalencia fija entre cebadas y miligramos de cafeína. <a href="https://pubmed.ncbi.nlm.nih.gov/38893465/" target="_blank" rel="noopener noreferrer">Estudio de preparación del mate, 2024 (inglés)</a>.</p><p>EFSA toma como referencias para adultos sanos hasta 200 mg por toma y 400 mg al día, sumando todas las fuentes. No son metas ni garantías individuales. En embarazo, la referencia es hasta 200 mg diarios. <a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a>.</p></details></article>
-          <article class="info-card"><h3>Cuidados al tomarlo</h3><p>Dejá enfriar la bebida y evitá tomarla muy caliente.</p><details><summary>Temperatura y precauciones</summary><p>IARC clasifica beber a más de 65 °C como probablemente cancerígeno por su relación con el cáncer de esófago. Esa cifra no garantiza ausencia de riesgo por debajo. <a href="https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/" target="_blank" rel="noopener noreferrer">IARC: bebidas muy calientes (inglés)</a>.</p><p>Si estás en embarazo o lactancia, tomás medicación o tenés una condición de salud, consultá qué consumo se adapta a vos. Estas referencias para adultos no son pautas para niños.</p><p>Una infusión no equivale a un extracto o suplemento concentrado. En té verde se han comunicado lesiones hepáticas, sobre todo con extractos en cápsulas. <a href="https://www.nccih.nih.gov/health/green-tea" target="_blank" rel="noopener noreferrer">NCCIH: té verde y extractos (inglés)</a>.</p></details></article>
+        <div class="hero-art" role="img" aria-label="Ilustración de un vaso de agua sobre una trama de caracteres y líneas de nivel" data-reveal>
+          <div class="art-frame">
+            <div class="art-meta"><span>FIG. 01</span><span>H₂O / 100 %</span></div>
+            <canvas class="ascii-canvas" data-ascii aria-hidden="true"></canvas>
+            <div class="art-grid" aria-hidden="true"></div>
+            <svg class="glass-svg" viewBox="0 0 220 320" aria-hidden="true" focusable="false">
+              <defs>
+                <clipPath id="glassClip">
+                  <path d="M62 58h96l-8 188q-2 30-40 30t-40-30Z"/>
+                </clipPath>
+                <pattern id="glassHatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="7" stroke="#102e33" stroke-width="1" opacity=".12"/>
+                </pattern>
+              </defs>
+              <ellipse class="glass-shadow" cx="110" cy="294" rx="72" ry="10"/>
+              <g clip-path="url(#glassClip)">
+                <rect x="54" y="50" width="112" height="236" fill="url(#glassHatch)" opacity=".55"/>
+                <path class="glass-water" d="M50 132q14-10 30 0t30 0 30 0 30 0v150H50Z"/>
+                <path class="glass-water-line" d="M50 132q14-10 30 0t30 0 30 0 30 0"/>
+                <circle class="glass-bubble" cx="92" cy="184" r="3"/>
+                <circle class="glass-bubble" cx="126" cy="210" r="4.5"/>
+                <circle class="glass-bubble" cx="108" cy="246" r="2.5"/>
+              </g>
+              <path class="glass-body" d="M62 58h96l-8 188q-2 30-40 30t-40-30Z"/>
+              <path class="glass-rim" d="M62 58h96"/>
+              <path class="glass-shine" d="M76 78v138"/>
+              <g class="glass-ticks">
+                <path d="M166 96h14"/><path d="M166 142h10"/><path d="M166 188h14"/><path d="M166 234h10"/>
+                <text x="184" y="99">08</text><text x="180" y="145">04</text><text x="184" y="191">00</text>
+              </g>
+            </svg>
+            <div class="art-caption"><span>HIDRATACIÓN, A TU MANERA</span><span class="caption-line" aria-hidden="true"></span></div>
+          </div>
+          <div class="art-stamp" aria-hidden="true"><span>8 VASOS</span><span>AL DÍA</span></div>
         </div>
-        <aside class="beverage-sources" aria-labelledby="mate-sources-title"><h2 id="mate-sources-title">Para seguir leyendo</h2><ul><li><a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a> — cantidades y descanso.</li><li><a href="https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/" target="_blank" rel="noopener noreferrer">IARC: bebidas muy calientes (inglés)</a> — temperatura.</li><li><a href="https://pubmed.ncbi.nlm.nih.gov/38893465/" target="_blank" rel="noopener noreferrer">Estudio de preparación del mate, 2024 (inglés)</a> — composición y preparación.</li><li><a href="https://onlinelibrary.wiley.com/doi/10.1002/mnfr.70065" target="_blank" rel="noopener noreferrer">Ensayo de mate, 2025 (inglés)</a> — evidencia exploratoria.</li><li><a href="https://www.nccih.nih.gov/health/green-tea" target="_blank" rel="noopener noreferrer">NCCIH: té verde y extractos (inglés)</a> — precauciones.</li></ul><p>Fuentes consultadas el 20 de octubre de 2026. Información general; no sustituye una consulta profesional.</p></aside>
+      </section>
+
+      <section class="ticker" aria-label="Datos rápidos de hidratación">
+        <div class="ticker-viewport">
+          <div class="ticker-track" data-marquee>
+            <div class="ticker-group">
+              <span><strong>20 %</strong> del agua que necesitamos puede venir de los alimentos</span>
+              <span class="ticker-sep" aria-hidden="true">✳</span>
+              <span><strong>8 vasos</strong> como referencia fácil de recordar</span>
+              <span class="ticker-sep" aria-hidden="true">✳</span>
+              <span><strong>2,7–3,7 L</strong> de líquidos totales al día</span>
+              <span class="ticker-sep" aria-hidden="true">✳</span>
+              <span><strong>Un vaso</strong> a la vez</span>
+              <span class="ticker-sep" aria-hidden="true">✳</span>
+            </div>
+            <div class="ticker-group" aria-hidden="true">
+              <span><strong>20 %</strong> del agua que necesitamos puede venir de los alimentos</span>
+              <span class="ticker-sep">✳</span>
+              <span><strong>8 vasos</strong> como referencia fácil de recordar</span>
+              <span class="ticker-sep">✳</span>
+              <span><strong>2,7–3,7 L</strong> de líquidos totales al día</span>
+              <span class="ticker-sep">✳</span>
+              <span><strong>Un vaso</strong> a la vez</span>
+              <span class="ticker-sep">✳</span>
+            </div>
+          </div>
+        </div>
+        <button class="ticker-toggle" id="ticker-toggle" type="button" aria-pressed="false">Pausar</button>
+      </section>
+
+      <section class="section wrap guide-section" id="guia">
+        <div class="section-heading">
+          <div class="section-label"><span class="section-index" aria-hidden="true">01</span><p class="eyebrow">LO ESENCIAL</p></div>
+          <h2>¿Cuánta agua<br><span class="serif">necesito?</span></h2>
+          <p class="section-intro">La respuesta corta: depende de ti. Tu actividad, el clima y tu salud pueden cambiar cuánto líquido necesitas.</p>
+        </div>
+
+        <div class="guide-grid">
+          <article class="volume-card" data-reveal>
+            <div class="card-top"><span class="tag">UNA REFERENCIA GENERAL</span><span class="card-mark" aria-hidden="true">✳</span></div>
+            <div class="volume-number">8<span>vasos</span></div>
+            <p>Es una meta fácil de recordar para empezar. No es una regla universal ni tiene que ser solo agua.</p>
+            <div class="glass-row" aria-hidden="true">
+              <span class="glass-unit"></span><span class="glass-unit"></span><span class="glass-unit"></span><span class="glass-unit"></span>
+              <span class="glass-unit"></span><span class="glass-unit"></span><span class="glass-unit"></span><span class="glass-unit"></span>
+            </div>
+          </article>
+
+          <article class="range-card" data-reveal>
+            <div class="range-art" aria-hidden="true">
+              <svg viewBox="0 0 440 360" focusable="false">
+                <defs>
+                  <pattern id="rangeHatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="9" stroke="#f1eee4" stroke-width="1" opacity=".14"/>
+                  </pattern>
+                </defs>
+                <rect width="440" height="360" fill="url(#rangeHatch)"/>
+                <circle class="range-sun" cx="322" cy="92" r="58"/>
+                <circle class="range-orbit" cx="322" cy="92" r="82"/>
+                <path class="range-line" d="M-20 232q70-46 140 0t140 0 140 0 140 0"/>
+                <path class="range-line" d="M-20 270q70-46 140 0t140 0 140 0 140 0"/>
+                <path class="range-line range-line-accent" d="M-20 308q70-46 140 0t140 0 140 0 140 0"/>
+                <path class="range-line" d="M-20 346q70-46 140 0t140 0 140 0 140 0"/>
+                <path class="range-leaf" d="M96 152c22-30 50-33 66-10-16 26-43 31-66 10Z"/>
+                <path class="range-leaf" d="M86 170c-4-32 17-57 43-52 2 30-15 51-43 52Z"/>
+              </svg>
+            </div>
+            <div class="range-content">
+              <span class="tag tag-light">LÍQUIDOS TOTALES</span>
+              <h3>2,7–3,7 <small>litros</small></h3>
+              <p>Mayo Clinic cita este rango aproximado para el adulto saludable promedio. Incluye líquidos de todas las fuentes, no solo agua servida.</p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="gentle-note" data-reveal>
+          <span class="info-mark" aria-hidden="true">i</span>
+          <p><strong>Una orientación, no una prescripción.</strong> Si tienes una condición de salud, tomas medicación o recibiste indicaciones sobre líquidos, consulta con tu profesional de salud.</p>
+        </aside>
+      </section>
+
+      <section class="section drinks-section" id="bebidas">
+        <div class="wrap">
+          <div class="section-heading drinks-heading">
+            <div class="section-label"><span class="section-index" aria-hidden="true">02</span><p class="eyebrow">LO QUE TOMAS</p></div>
+            <h2>No todo viene<br><span class="serif">en un vaso de agua.</span></h2>
+            <p class="section-intro">También cuentan otras bebidas y algunos alimentos. Elige con calma y recuerda que no todas aportan lo mismo.</p>
+          </div>
+
+          <div class="drink-grid">
+            <article class="drink-card drink-good" data-reveal>
+              <div class="drink-card-top"><span class="drink-number">01</span><span class="drink-label"><span class="status-dot status-green"></span> LA OPCIÓN MÁS SIMPLE</span></div>
+              <div class="drink-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2.8c3.4 4.2 5.3 7 5.3 9.4a5.3 5.3 0 0 1-10.6 0c0-2.4 1.9-5.2 5.3-9.4Z"/><path d="M8.6 13.7c1.1.9 2.2.9 3.4 0s2.3-.9 3.4 0"/></svg>
+              </div>
+              <h3>Agua</h3>
+              <p>Hidrata sin azúcar ni calorías. Un buen punto de partida a lo largo del día.</p>
+              <span class="drink-mark" aria-hidden="true">↗</span>
+            </article>
+
+            <article class="drink-card drink-ok" data-reveal>
+              <div class="drink-card-top"><span class="drink-number">02</span><span class="drink-label"><span class="status-dot status-green"></span> TAMBIÉN APORTAN LÍQUIDO</span></div>
+              <div class="drink-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M4.5 8.5h13v5.3a5.4 5.4 0 0 1-5.4 5.4H9.9a5.4 5.4 0 0 1-5.4-5.4Z"/><path d="M17.5 10h1.2a2.7 2.7 0 0 1 0 5.4h-1.2"/><path d="M2.8 21h16.4"/><path d="M9 3.2c.7.9.7 1.5 0 2.4M13 3.2c.7.9.7 1.5 0 2.4"/></svg>
+              </div>
+              <h3>Té, café y leche</h3>
+              <p>Pueden contribuir a tu ingesta de líquidos. Elige opciones que se adapten a ti.</p>
+              <span class="drink-mark" aria-hidden="true">↗</span>
+            </article>
+
+            <article class="drink-card drink-caution" data-reveal>
+              <div class="drink-card-top"><span class="drink-number">03</span><span class="drink-label"><span class="status-dot status-amber"></span> MEJOR CON MODERACIÓN</span></div>
+              <div class="drink-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M8 3h8l-.7 17.2q-.1 1.8-1.9 1.8h-2.8q-1.8 0-1.9-1.8Z"/><path d="M8.2 8h7.6"/><path d="M11 13.2h.1M13.5 14.4h.1M12 16.8h.1"/></svg>
+              </div>
+              <h3>Bebidas azucaradas</h3>
+              <p>Refrescos y jugos pueden aportar mucho azúcar, sal o calorías.</p>
+              <span class="drink-mark" aria-hidden="true">!</span>
+            </article>
+
+            <article class="drink-card drink-energy" data-reveal>
+              <div class="drink-card-top"><span class="drink-number">04</span><span class="drink-label"><span class="status-dot status-amber"></span> CON CAFEÍNA</span></div>
+              <div class="drink-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M13 2 4.5 13.5H11l-1 8.5 9-12h-6.5Z"/></svg>
+              </div>
+              <h3>Bebidas energizantes</h3>
+              <p>Contienen cafeína y tienen efecto estimulante. Revisá la etiqueta para conocer su composición.</p>
+              <details class="energy-details">
+                <summary>Más información<span class="sr-only"> sobre bebidas energizantes</span></summary>
+                <p>Sin azúcar no significa sin cafeína: comprobá ambos datos y cuánto contiene el envase completo.</p>
+                <p>No las mezcles con alcohol. La JND aconseja evitar su consumo en niños y adolescentes y señala embarazo y lactancia como situaciones de mayor riesgo.</p>
+                <p>La cafeína puede afectar el sueño y provocar nerviosismo o palpitaciones. Considerá también la que consumís con mate, té o café.</p>
+                <p>Fuentes: <a href="https://www.gub.uy/junta-nacional-drogas/comunicacion/publicaciones/energizantes" target="_blank" rel="noopener noreferrer">JND: energizantes</a> y <a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a>. Consultadas el 20 de octubre de 2026.</p>
+              </details>
+              <span class="drink-mark" aria-hidden="true">!</span>
+            </article>
+
+            <article class="drink-card drink-avoid" data-reveal>
+              <div class="drink-card-top"><span class="drink-number">05</span><span class="drink-label"><span class="status-dot status-red"></span> NO PARA HIDRATARSE</span></div>
+              <div class="drink-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M5 3h14l-1.6 16.2q-.2 1.8-2 1.8H8.6q-1.8 0-2-1.8Z"/><path d="M6.2 9h11.6"/><path d="m8.5 12.5 7 7M15.5 12.5l-7 7"/></svg>
+              </div>
+              <h3>Alcohol</h3>
+              <p>No lo cuentes como una opción para hidratarte: prioriza agua u otras bebidas sin alcohol.</p>
+              <span class="drink-mark" aria-hidden="true">!</span>
+            </article>
+          </div>
+          <p class="food-footnote"><span aria-hidden="true">✿</span> Frutas y verduras con alto contenido de agua, como sandía, fresas y melón, también suman.</p>
+        </div>
+      </section>
+
+      <section class="section tracker-section wrap" id="contador">
+        <div class="tracker-intro" data-reveal>
+          <div class="section-label"><span class="section-index" aria-hidden="true">03</span><p class="eyebrow">TU PAUSA DE HOY</p></div>
+          <h2>Vamos <span class="serif">vaso</span><br>a vaso.</h2>
+          <p>Registra lo que tomas y sigue tu ritmo. Tu progreso se guarda en este dispositivo.</p>
+          <div class="daily-tip"><span aria-hidden="true">✳</span><span><strong>Un hábito flexible</strong><br>La meta es una referencia; escucha tu cuerpo.</span></div>
+        </div>
+
+        <div class="tracker-card" data-reveal>
+          <div class="tracker-top">
+            <div><span class="today-label">TU DÍA DE HOY</span><p class="today-date" id="today-date"></p></div>
+            <button class="reset-button" id="reset-button" type="button" aria-label="Reiniciar contador de hoy">Reiniciar ↺</button>
+          </div>
+          <div class="progress-area">
+            <div class="progress-copy">
+              <span class="progress-count"><strong id="current-count">0</strong><span> / <span id="goal-count">8</span> vasos</span></span>
+              <span class="progress-caption" id="progress-caption">Cada vaso cuenta</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-label="Progreso de vasos de hoy" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div>
+          </div>
+          <div class="cup-grid" id="cup-grid" role="group" aria-label="Vasos registrados"></div>
+          <div class="tracker-controls">
+            <button class="button button-add" id="add-glass" type="button"><span aria-hidden="true">＋</span> Tomé un vaso</button>
+            <label class="goal-control" for="goal-select">Meta
+              <select id="goal-select" aria-label="Elegir meta diaria">
+                <option value="6">6 vasos</option>
+                <option value="8" selected>8 vasos</option>
+                <option value="10">10 vasos</option>
+                <option value="12">12 vasos</option>
+              </select>
+            </label>
+          </div>
+          <div class="reminders">
+            <div class="reminder-header">
+              <div><span class="reminder-title">PAUSAS PARA RECORDAR</span><p>Un empujoncito mientras tengas la página abierta.</p></div>
+              <label class="switch-label"><span class="sr-only">Activar avisos</span><input type="checkbox" id="reminder-toggle"><span class="switch"></span></label>
+            </div>
+            <div class="reminder-times" id="reminder-times"></div>
+            <p class="reminder-status" id="reminder-status" aria-live="polite">Avisos apagados</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="source-section">
+        <div class="wrap source-inner">
+          <span class="source-index" aria-hidden="true">04</span>
+          <div class="source-copy"><p class="eyebrow">PARA SEGUIR LEYENDO</p><h2>Información con respaldo.</h2><p>Resumen basado en la guía de Mayo Clinic para adultos saludables.</p></div>
+          <a href="https://www.mayoclinic.org/es/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/water/art-20044256" target="_blank" rel="noopener noreferrer">Leer en Mayo Clinic <span aria-hidden="true">↗</span></a>
+        </div>
       </section>
     </div>
-    <div id="view-te" class="beverage-view" aria-labelledby="te-title">
-    <section class="hero wrap beverage-cover">
-      <div class="hero-copy"><h1 id="te-title">Té<span class="serif">.</span></h1><p class="hero-text">Una taza y un momento para vos. Explorá el té, su cafeína y algunos cuidados sencillos.</p></div>
-      <div class="beverage-art" role="img" aria-label="Ilustración de una taza de té">
-        <svg viewBox="0 0 400 400" aria-hidden="true" focusable="false"><circle class="art-ring" cx="200" cy="200" r="155"/><circle class="art-sun" cx="290" cy="100" r="35"/><ellipse class="art-shadow" cx="200" cy="317" rx="99" ry="12"/><ellipse class="tea-saucer" cx="200" cy="300" rx="97" ry="15"/><path class="tea-handle" d="M265 205C330 180 332 268 265 265"/><path class="tea-cup" d="M123 192h152l-12 65q-9 39-64 39t-64-39Z"/><ellipse class="tea-rim" cx="199" cy="192" rx="76" ry="21"/><ellipse class="tea-fill" cx="199" cy="194" rx="64" ry="13"/><path class="tea-steam" d="M177 157c-24-28 22-32 0-61m45 61c-24-28 22-32 0-61"/><path class="art-shine" d="m147 223 5 26q2 12 14 18"/></svg>
-      </div>
-    </section>
-      <section class="beverage-info wrap" aria-labelledby="te-guide-title">
-        <h2 id="te-guide-title">Tu pausa, con información.</h2>
-        <div class="beverage-info-grid">
-          <article class="info-card"><h3>Qué aporta</h3><p>El té verde, negro y oolong provienen de Camellia sinensis. El té verde contiene cafeína y catequinas, un tipo de polifenoles.</p><details><summary>Qué sabemos de la evidencia</summary><p>Los resultados sobre beneficios del té verde son limitados o variables. Muchos estudios usan extractos: sus resultados no se pueden trasladar directamente a una taza. <a href="https://www.nccih.nih.gov/health/green-tea" target="_blank" rel="noopener noreferrer">NCCIH: té verde y extractos (inglés)</a>.</p></details></article>
-          <article class="info-card"><h3>Cafeína y descanso</h3><p>La cafeína puede dificultar el descanso, especialmente cerca de la hora de dormir.</p><details><summary>Cantidades y preparación</summary><p>El contenido de cafeína cambia según el producto y la porción. Evitá usar una cifra por taza como si fuera exacta. <a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a>.</p><p>EFSA toma como referencias para adultos sanos hasta 200 mg por toma y 400 mg al día, sumando todas las fuentes. No son metas ni garantías individuales. En embarazo, la referencia es hasta 200 mg diarios. <a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a>.</p></details></article>
-          <article class="info-card"><h3>Cuidados al tomarlo</h3><p>Dejá enfriar la bebida y evitá tomarla muy caliente.</p><details><summary>Temperatura y precauciones</summary><p>IARC clasifica beber a más de 65 °C como probablemente cancerígeno por su relación con el cáncer de esófago. Esa cifra no garantiza ausencia de riesgo por debajo. <a href="https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/" target="_blank" rel="noopener noreferrer">IARC: bebidas muy calientes (inglés)</a>.</p><p>Si estás en embarazo o lactancia, tomás medicación o tenés una condición de salud, consultá qué consumo se adapta a vos. Estas referencias para adultos no son pautas para niños.</p><p>Una infusión no equivale a un extracto o suplemento concentrado. En té verde se han comunicado lesiones hepáticas, sobre todo con extractos en cápsulas. <a href="https://www.nccih.nih.gov/health/green-tea" target="_blank" rel="noopener noreferrer">NCCIH: té verde y extractos (inglés)</a>.</p></details></article>
+
+    <div id="view-mate" class="beverage-view" aria-labelledby="mate-title">
+      <section class="hero wrap beverage-cover">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-index">02</span> BEBIDA / MATE</p>
+          <h1 id="mate-title">Mate<span class="serif">.</span></h1>
+          <p class="hero-text">Una pausa que nos acompaña. Conocé lo esencial sobre el mate, su cafeína y la temperatura al tomarlo.</p>
+          <div class="beverage-chips">
+            <span>CAFEÍNA</span><span>TEMPERATURA</span><span>PAUSA</span>
+          </div>
         </div>
-        <aside class="beverage-sources" aria-labelledby="te-sources-title"><h2 id="te-sources-title">Para seguir leyendo</h2><ul><li><a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a> — cantidades y descanso.</li><li><a href="https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/" target="_blank" rel="noopener noreferrer">IARC: bebidas muy calientes (inglés)</a> — temperatura.</li><li><a href="https://www.nccih.nih.gov/health/green-tea" target="_blank" rel="noopener noreferrer">NCCIH: té verde y extractos (inglés)</a> — composición y preparación.</li><li><a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a> — precauciones.</li></ul><p>Fuentes consultadas el 20 de octubre de 2026. Información general; no sustituye una consulta profesional.</p></aside>
+        <div class="beverage-art" role="img" aria-label="Ilustración grabada de un mate con bombilla">
+          <svg viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+            <defs>
+              <pattern id="mateHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="8" stroke="#123a31" stroke-width="1" opacity=".14"/>
+              </pattern>
+            </defs>
+            <circle class="art-ring" cx="200" cy="200" r="155"/>
+            <circle class="art-ring art-ring-two" cx="200" cy="200" r="120"/>
+            <path class="art-contour" d="M22 282q76-42 152 0t152 0 52 0"/>
+            <path class="art-contour" d="M22 306q76-42 152 0t152 0 52 0"/>
+            <circle class="art-sun" cx="294" cy="104" r="32"/>
+            <rect x="55" y="58" width="290" height="290" fill="url(#mateHatch)" opacity=".55"/>
+            <ellipse class="art-shadow" cx="200" cy="320" rx="88" ry="13"/>
+            <path class="mate-straw" d="M214 202 253 83 277 68"/>
+            <path class="mate-body" d="M139 192Q115 222 126 269Q139 320 200 320Q261 320 274 269Q285 222 261 192Z"/>
+            <ellipse class="mate-rim" cx="200" cy="193" rx="63" ry="22"/>
+            <ellipse class="mate-leaves" cx="200" cy="193" rx="52" ry="14"/>
+            <path class="mate-straw" d="m214 194 16-48"/>
+            <path class="art-shine" d="M147 234q-4 34 19 51"/>
+            <path class="art-contour art-contour-light" d="M108 130q42-36 96-26t70 62"/>
+          </svg>
+        </div>
+      </section>
+
+      <section class="beverage-info wrap" aria-labelledby="mate-guide-title">
+        <div class="beverage-info-heading"><p class="eyebrow">NOTAS DE CAMPO / 01—03</p><h2 id="mate-guide-title">Tu pausa, con información.</h2></div>
+        <div class="beverage-info-grid">
+          <article class="info-card">
+            <span class="info-index" aria-hidden="true">01</span>
+            <h3>Qué aporta</h3>
+            <p>El mate es una infusión de yerba con cafeína y polifenoles, compuestos vegetales que se estudian por su actividad antioxidante.</p>
+            <details><summary>Qué sabemos de la evidencia</summary><p>Se investigan sus posibles efectos metabólicos. Un ensayo de ocho semanas encontró cambios en algunos indicadores, pero no demuestra que tomar mate prevenga enfermedades. <a href="https://onlinelibrary.wiley.com/doi/10.1002/mnfr.70065" target="_blank" rel="noopener noreferrer">Ensayo de mate, 2025 (inglés)</a>.</p></details>
+          </article>
+          <article class="info-card info-card-dark">
+            <span class="info-index" aria-hidden="true">02</span>
+            <h3>Cafeína y descanso</h3>
+            <p>La cafeína puede dificultar el descanso, especialmente cerca de la hora de dormir.</p>
+            <details><summary>Cantidades y preparación</summary><p>La preparación y las cebadas cambian la composición de la infusión. Por eso no usamos una equivalencia fija entre cebadas y miligramos de cafeína. <a href="https://pubmed.ncbi.nlm.nih.gov/38893465/" target="_blank" rel="noopener noreferrer">Estudio de preparación del mate, 2024 (inglés)</a>.</p><p>EFSA toma como referencias para adultos sanos hasta 200 mg por toma y 400 mg al día, sumando todas las fuentes. No son metas ni garantías individuales. En embarazo, la referencia es hasta 200 mg diarios. <a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a>.</p></details>
+          </article>
+          <article class="info-card">
+            <span class="info-index" aria-hidden="true">03</span>
+            <h3>Cuidados al tomarlo</h3>
+            <p>Dejá enfriar la bebida y evitá tomarla muy caliente.</p>
+            <details><summary>Temperatura y precauciones</summary><p>IARC clasifica beber a más de 65 °C como probablemente cancerígeno por su relación con el cáncer de esófago. Esa cifra no garantiza ausencia de riesgo por debajo. <a href="https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/" target="_blank" rel="noopener noreferrer">IARC: bebidas muy calientes (inglés)</a>.</p><p>Si estás en embarazo o lactancia, tomás medicación o tenés una condición de salud, consultá qué consumo se adapta a vos. Estas referencias para adultos no son pautas para niños.</p><p>Una infusión no equivale a un extracto o suplemento concentrado. En té verde se han comunicado lesiones hepáticas, sobre todo con extractos en cápsulas. <a href="https://www.nccih.nih.gov/health/green-tea" target="_blank" rel="noopener noreferrer">NCCIH: té verde y extractos (inglés)</a>.</p></details>
+          </article>
+        </div>
+        <aside class="beverage-sources" aria-labelledby="mate-sources-title">
+          <h2 id="mate-sources-title">Para seguir leyendo</h2>
+          <ul><li><a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a> — cantidades y descanso.</li><li><a href="https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/" target="_blank" rel="noopener noreferrer">IARC: bebidas muy calientes (inglés)</a> — temperatura.</li><li><a href="https://pubmed.ncbi.nlm.nih.gov/38893465/" target="_blank" rel="noopener noreferrer">Estudio de preparación del mate, 2024 (inglés)</a> — composición y preparación.</li><li><a href="https://onlinelibrary.wiley.com/doi/10.1002/mnfr.70065" target="_blank" rel="noopener noreferrer">Ensayo de mate, 2025 (inglés)</a> — evidencia exploratoria.</li><li><a href="https://www.nccih.nih.gov/health/green-tea" target="_blank" rel="noopener noreferrer">NCCIH: té verde y extractos (inglés)</a> — precauciones.</li></ul>
+          <p>Fuentes consultadas el 20 de octubre de 2026. Información general; no sustituye una consulta profesional.</p>
+        </aside>
+      </section>
+    </div>
+
+    <div id="view-te" class="beverage-view" aria-labelledby="te-title">
+      <section class="hero wrap beverage-cover">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-index">03</span> BEBIDA / TÉ</p>
+          <h1 id="te-title">Té<span class="serif">.</span></h1>
+          <p class="hero-text">Una taza y un momento para vos. Explorá el té, su cafeína y algunos cuidados sencillos.</p>
+          <div class="beverage-chips">
+            <span>CAFEÍNA</span><span>TEMPERATURA</span><span>PAUSA</span>
+          </div>
+        </div>
+        <div class="beverage-art" role="img" aria-label="Ilustración grabada de una taza de té">
+          <svg viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+            <defs>
+              <pattern id="teaHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="8" stroke="#3c2a20" stroke-width="1" opacity=".13"/>
+              </pattern>
+            </defs>
+            <circle class="art-ring" cx="200" cy="200" r="155"/>
+            <circle class="art-ring art-ring-two" cx="200" cy="200" r="120"/>
+            <path class="art-contour" d="M22 282q76-42 152 0t152 0 52 0"/>
+            <path class="art-contour" d="M22 306q76-42 152 0t152 0 52 0"/>
+            <circle class="art-sun" cx="294" cy="104" r="32"/>
+            <rect x="55" y="58" width="290" height="290" fill="url(#teaHatch)" opacity=".55"/>
+            <ellipse class="art-shadow" cx="200" cy="317" rx="99" ry="12"/>
+            <ellipse class="tea-saucer" cx="200" cy="300" rx="97" ry="15"/>
+            <path class="tea-handle" d="M265 205C330 180 332 268 265 265"/>
+            <path class="tea-cup" d="M123 192h152l-12 65q-9 39-64 39t-64-39Z"/>
+            <ellipse class="tea-rim" cx="199" cy="192" rx="76" ry="21"/>
+            <ellipse class="tea-fill" cx="199" cy="194" rx="64" ry="13"/>
+            <path class="tea-steam" d="M177 157c-24-28 22-32 0-61m45 61c-24-28 22-32 0-61"/>
+            <path class="art-shine" d="m147 223 5 26q2 12 14 18"/>
+            <path class="art-contour art-contour-light" d="M108 130q42-36 96-26t70 62"/>
+          </svg>
+        </div>
+      </section>
+
+      <section class="beverage-info wrap" aria-labelledby="te-guide-title">
+        <div class="beverage-info-heading"><p class="eyebrow">NOTAS DE CAMPO / 01—03</p><h2 id="te-guide-title">Tu pausa, con información.</h2></div>
+        <div class="beverage-info-grid">
+          <article class="info-card">
+            <span class="info-index" aria-hidden="true">01</span>
+            <h3>Qué aporta</h3>
+            <p>El té verde, negro y oolong provienen de Camellia sinensis. El té verde contiene cafeína y catequinas, un tipo de polifenoles.</p>
+            <details><summary>Qué sabemos de la evidencia</summary><p>Los resultados sobre beneficios del té verde son limitados o variables. Muchos estudios usan extractos: sus resultados no se pueden trasladar directamente a una taza. <a href="https://www.nccih.nih.gov/health/green-tea" target="_blank" rel="noopener noreferrer">NCCIH: té verde y extractos (inglés)</a>.</p></details>
+          </article>
+          <article class="info-card info-card-dark">
+            <span class="info-index" aria-hidden="true">02</span>
+            <h3>Cafeína y descanso</h3>
+            <p>La cafeína puede dificultar el descanso, especialmente cerca de la hora de dormir.</p>
+            <details><summary>Cantidades y preparación</summary><p>El contenido de cafeína cambia según el producto y la porción. Evitá usar una cifra por taza como si fuera exacta. <a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a>.</p><p>EFSA toma como referencias para adultos sanos hasta 200 mg por toma y 400 mg al día, sumando todas las fuentes. No son metas ni garantías individuales. En embarazo, la referencia es hasta 200 mg diarios. <a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a>.</p></details>
+          </article>
+          <article class="info-card">
+            <span class="info-index" aria-hidden="true">03</span>
+            <h3>Cuidados al tomarlo</h3>
+            <p>Dejá enfriar la bebida y evitá tomarla muy caliente.</p>
+            <details><summary>Temperatura y precauciones</summary><p>IARC clasifica beber a más de 65 °C como probablemente cancerígeno por su relación con el cáncer de esófago. Esa cifra no garantiza ausencia de riesgo por debajo. <a href="https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/" target="_blank" rel="noopener noreferrer">IARC: bebidas muy calientes (inglés)</a>.</p><p>Si estás en embarazo o lactancia, tomás medicación o tenés una condición de salud, consultá qué consumo se adapta a vos. Estas referencias para adultos no son pautas para niños.</p><p>Una infusión no equivale a un extracto o suplemento concentrado. En té verde se han comunicado lesiones hepáticas, sobre todo con extractos en cápsulas. <a href="https://www.nccih.nih.gov/health/green-tea" target="_blank" rel="noopener noreferrer">NCCIH: té verde y extractos (inglés)</a>.</p></details>
+          </article>
+        </div>
+        <aside class="beverage-sources" aria-labelledby="te-sources-title">
+          <h2 id="te-sources-title">Para seguir leyendo</h2>
+          <ul><li><a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a> — cantidades y descanso.</li><li><a href="https://www.iarc.who.int/media-centre-iarc-news-drinking-very-hot-beverages/" target="_blank" rel="noopener noreferrer">IARC: bebidas muy calientes (inglés)</a> — temperatura.</li><li><a href="https://www.nccih.nih.gov/health/green-tea" target="_blank" rel="noopener noreferrer">NCCIH: té verde y extractos (inglés)</a> — composición y preparación.</li><li><a href="https://www.efsa.europa.eu/es/topics/topic/caffeine" target="_blank" rel="noopener noreferrer">EFSA: cafeína</a> — precauciones.</li></ul>
+          <p>Fuentes consultadas el 20 de octubre de 2026. Información general; no sustituye una consulta profesional.</p>
+        </aside>
       </section>
     </div>
   </main>
 
-  <footer class="site-footer"><div class="wrap footer-top"><a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">◒</span> agüita<span class="brand-period">.</span></a><p>Un recordatorio amable para cuidar de ti.</p><a class="coffee-link" href="https://ko-fi.com/martinmartinezgarcia" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">☕</span> Si te gustó la app, podés invitarme un café <span aria-hidden="true">↗</span></a></div><div class="wrap footer-bottom"><span>Hecho con calma y un vaso de agua.</span><span>Contenido informativo; no sustituye consejo médico.</span><a href="#inicio">Volver arriba ↑</a></div></footer>
+  <footer class="site-footer" data-tide>
+    <div class="footer-tide" aria-hidden="true">
+      <svg viewBox="0 0 1440 520" preserveAspectRatio="xMidYMax slice" focusable="false">
+        <defs>
+          <pattern id="tideDots" width="16" height="16" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="1" fill="#f1eee4" opacity=".22"/>
+          </pattern>
+          <pattern id="tideHatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="10" stroke="#f1eee4" stroke-width="1" opacity=".09"/>
+          </pattern>
+        </defs>
+        <rect width="1440" height="520" fill="url(#tideDots)"/>
+        <rect width="1440" height="520" fill="url(#tideHatch)"/>
+        <circle class="tide-sun" cx="1178" cy="142" r="76"/>
+        <circle class="tide-sun tide-sun-two" cx="1178" cy="142" r="104"/>
+        <g class="tide-lines">
+          <path pathLength="1" d="M-30 214q90-46 180 0t180 0 180 0 180 0 180 0 180 0 180 0 180 0 180 0"/>
+          <path pathLength="1" d="M-30 252q90-46 180 0t180 0 180 0 180 0 180 0 180 0 180 0 180 0 180 0"/>
+          <path class="tide-line-accent" pathLength="1" d="M-30 290q90-46 180 0t180 0 180 0 180 0 180 0 180 0 180 0 180 0 180 0"/>
+          <path pathLength="1" d="M-30 328q90-46 180 0t180 0 180 0 180 0 180 0 180 0 180 0 180 0 180 0"/>
+          <path pathLength="1" d="M-30 366q90-46 180 0t180 0 180 0 180 0 180 0 180 0 180 0 180 0 180 0"/>
+          <path pathLength="1" d="M-30 404q90-46 180 0t180 0 180 0 180 0 180 0 180 0 180 0 180 0 180 0"/>
+          <path class="tide-line-accent" pathLength="1" d="M-30 442q90-46 180 0t180 0 180 0 180 0 180 0 180 0 180 0 180 0 180 0"/>
+          <path pathLength="1" d="M-30 480q90-46 180 0t180 0 180 0 180 0 180 0 180 0 180 0 180 0 180 0"/>
+        </g>
+        <g class="tide-hatch">
+          <path d="M80 520V394M118 520V420M156 520V380M194 520V442M232 520V406"/>
+          <path d="M520 520V430M558 520V392M596 520V450M634 520V410M672 520V436"/>
+          <path d="M960 520V402M998 520V444M1036 520V388M1074 520V426M1112 520V452"/>
+          <path d="M1280 520V410M1318 520V438M1356 520V396M1394 520V448"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="wrap footer-content">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio" aria-label="Agüita, inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2.6c3.7 4.5 5.8 7.5 5.8 10.1a5.8 5.8 0 0 1-11.6 0c0-2.6 2.1-5.6 5.8-10.1Z"/><path d="M8.1 14.2c1.3 1 2.6 1 3.9 0s2.6-1 3.9 0"/></svg>
+          </span>
+          <span>agüita<span class="brand-period">.</span></span>
+        </a>
+        <p>Un recordatorio amable para cuidar de ti.</p>
+        <a class="coffee-link" href="https://ko-fi.com/martinmartinezgarcia" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">☕</span> Si te gustó la app, podés invitarme un café <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <nav class="footer-col" aria-label="Explorar">
+        <span>EXPLORAR</span>
+        <a href="#guia" data-water-link>La guía</a>
+        <a href="#bebidas" data-water-link>Bebidas</a>
+        <a href="#contador" data-water-link>Mi contador</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Información">
+        <span>INFORMACIÓN</span>
+        <a href="https://www.mayoclinic.org/es/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/water/art-20044256" target="_blank" rel="noopener noreferrer">Mayo Clinic ↗</a>
+        <a href="https://ko-fi.com/martinmartinezgarcia" target="_blank" rel="noopener noreferrer">Ko-fi ↗</a>
+        <a href="#inicio">Volver arriba ↑</a>
+      </nav>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <span>Hecho con calma y un vaso de agua.</span>
+      <span>Contenido informativo; no sustituye consejo médico.</span>
+      <span>© 2026 Agüita</span>
+    </div>
+    <div class="footer-word" aria-hidden="true">agüita.</div>
+  </footer>
 </body>
 </html>
